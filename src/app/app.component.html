@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://use.fontawesome.com/3903c9d7fd.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+    <title>3D 𝐍𝐚𝐯𝐛𝐚𝐫</title>
+</head>
+<body>
+    <div class="center">
+        <div class="menu">
+            
+            
+            <ul class="menu">
+                <li class="menu_list">
+                    <span class="front fas fa-home"></span>
+                    <a routerLink="task" class="side">Tasks</a>
+                </li>
+                <li class="menu_list">
+                    <span class="front fas fa-info"></span>
+                    <a routerLink="milestone" class="side">Milestone</a>
+                </li>
+                <li class="menu_list">
+                    <span class="front fas fa-briefcase"></span>
+                    <a routerLink="projects" class="side">projects</a>
+                </li>
+            </ul>
+        </div>
+        <div class="router">
+
+            <router-outlet></router-outlet>
+        </div>
+            
+        </div>
+</body>
+</html>

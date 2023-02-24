@@ -1,0 +1,32 @@
+<table class="styled-table">
+    <thead>
+        <tr>
+            <ng-content></ng-content>
+            <th>Name</th>
+            <th>Duration</th>
+            <th>Set Progress</th>
+
+        </tr>
+    </thead>
+    <div *ngFor="let key of data,let i=index">
+        <div>
+            <tbody>
+                <tr>
+                    <td>{{key.name}}</td>
+                    <td>{{key.duration}}</td>
+                    <td>
+                        <select name="language" id="language"
+                            (change)="onChange(key.id,$event)">
+                            <option value="1" [selected]="key.status==='1'">On-hold</option>
+                            <option value="2" [selected]="key.status==='2'">Pending</option>
+                            <option value="3" [selected]="key.status==='3'">Completed</option>
+                        </select>
+                    </td>
+                    <!-- <td>{{key.status}}</td> -->
+                </tr>
+            </tbody>
+
+        </div>
+
+    </div>
+</table>
