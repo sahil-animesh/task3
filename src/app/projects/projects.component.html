@@ -1,3 +1,3 @@
-<app-table [data]="projects" (statuschanged)="onStatusChange($event)">
+<app-table [data]="projects" (statuschanged)="onStatusChange($event)" (statusunchanged)="getrequest()">
     <h1>This is Projects Component</h1>
 </app-table>

@@ -13,16 +13,20 @@ export class ProjectsComponent implements OnInit{
     //this.projects[data.index].status=data.value;
     //console.log(this.projects[data.index])
     this.projects[data.index-1].status=data.value;
-    console.log(data.value)
+    this.projects[data.index-1].reason=data.reason;
     this.http.put("http://localhost:3000/projects/"+data.index+"",this.projects[data.index-1]).subscribe((res)=> {
       console.log(res);
     })
   }
-
-  ngOnInit(): void {
+  getrequest()
+  {
     this.http.get("http://localhost:3000/projects").subscribe((res) => {
         this.projects=res;
     })
+  }
+
+  ngOnInit(): void {
+    this.getrequest()
   }
 
 }

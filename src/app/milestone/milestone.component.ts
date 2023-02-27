@@ -13,9 +13,8 @@ export class MilestoneComponent implements OnInit{
     //this.projects[data.index].status=data.value;
     //console.log(this.projects[data.index])
     this.projects[data.index-1].status=data.value;
-    console.log(data.value)
     this.http.put("http://localhost:3000/milestone/"+data.index+"",this.projects[data.index-1]).subscribe((res)=> {
-      console.log(res);
+      //console.log(res);
     })
   }
 
