@@ -23,6 +23,9 @@
             "style": "camelCase"
           }
         ],
+        "max-lines": ["error", 100],
+        "camelcase":"error",
+        "no-irregular-whitespace": "error",
         "@angular-eslint/component-selector": [
           "error",
           {
@@ -40,7 +43,11 @@
       "extends": [
         "plugin:@angular-eslint/template/recommended"
       ],
-      "rules": {}
+      "rules": {
+        "max-lines": ["error", 100],
+        "camelcase":"error",
+        "no-irregular-whitespace": "error"
+      }
     }
   ]
 }

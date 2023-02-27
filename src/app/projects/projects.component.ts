@@ -9,7 +9,7 @@ export class ProjectsComponent implements OnInit{
   
   projects:any=[];
   constructor(private http:HttpClient){}
-  onStatusChange(data :any){
+  onStatusChange(data :{index:number,value:string,reason:string}){
     //this.projects[data.index].status=data.value;
     //console.log(this.projects[data.index])
     this.projects[data.index-1].status=data.value;

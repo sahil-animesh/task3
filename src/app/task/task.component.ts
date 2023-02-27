@@ -9,10 +9,11 @@ export class TaskComponent implements OnInit{
 
   projects:any=[];
   constructor(private http:HttpClient){}
-  onStatusChange(data :any){
+  onStatusChange(data :{index:number,value:string,reason:string}){
     //this.projects[data.index].status=data.value;
     //console.log(this.projects[data.index])
     this.projects[data.index-1].status=data.value;
+    this.projects[data.index-1].reason=data.reason;
     console.log(data.value)
     this.http.put("http://localhost:3000/task/"+data.index+"",this.projects[data.index-1]).subscribe((res)=> {
       console.log(res);
